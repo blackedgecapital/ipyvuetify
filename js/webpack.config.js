@@ -7,7 +7,7 @@ var rules = [
   { test: /\.css$/, use: ["style-loader", "css-loader"] },
   {
     test: /\.(woff|woff2|eot|ttf|otf)$/,
-    loader: "file-loader",
+    type: "asset/resource",
   },
 ];
 
@@ -34,6 +34,7 @@ module.exports = [
         "jupyter-vuetify"
       ),
       libraryTarget: "amd",
+      publicPath: "",
     },
     mode: "production",
   },
@@ -57,6 +58,7 @@ module.exports = [
         "jupyter-vuetify"
       ),
       libraryTarget: "amd",
+      publicPath: "",
     },
     devtool: "source-map",
     module: {
@@ -88,6 +90,7 @@ module.exports = [
         "jupyter-vuetify"
       ),
       libraryTarget: "amd",
+      publicPath: "",
     },
     devtool: "source-map",
     module: {
